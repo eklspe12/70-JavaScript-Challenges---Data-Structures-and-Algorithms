@@ -1,0 +1,15 @@
+{
+	"name": "01-hello-world",
+	"version": "1.0.0",
+	"description": "This is a practice challenge to show you how things are set up and how to test, etc.",
+	"main": "hello-world-run.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"jest": "^29.7.0"
+	}
+}
