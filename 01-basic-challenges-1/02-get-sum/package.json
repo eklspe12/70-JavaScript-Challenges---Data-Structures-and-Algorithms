@@ -1,0 +1,12 @@
+{
+	"name": "02-get-sum",
+	"version": "1.0.0",
+	"description": "This is another very basic practice challenge just to get you into the hang of things.",
+	"main": "get-sum-run.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
