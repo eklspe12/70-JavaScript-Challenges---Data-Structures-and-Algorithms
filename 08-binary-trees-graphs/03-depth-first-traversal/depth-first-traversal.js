@@ -22,14 +22,13 @@ function depthFirstTraversal(root) {
 	}
 	if (current.right) {
 		stack.push(current.right);
+		z;
 	}
 	if (current.left) {
 		stack.push(current.left);
 	}
 	return result;
 }
-
-function depthFirstTraversal() {}
 
 module.exports = {
 	Node,
