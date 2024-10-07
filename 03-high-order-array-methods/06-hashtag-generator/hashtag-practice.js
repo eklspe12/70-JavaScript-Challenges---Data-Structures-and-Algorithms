@@ -6,7 +6,7 @@ function hashtagGenerator(str) {
 		let fixedWord = firstChar + word.slice(1);
 		hashtag = hashtag + fixedWord;
 	});
-	if (hashtag.length > 140) {
+	if (hashtag.length > 140 || str === '') {
 		return false;
 	}
 	return hashtag;

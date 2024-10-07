@@ -1,19 +1,15 @@
 function generateHashtag(str) {
-	let wordArr =
-		'#' +
-		str
-			.split(' ')
-			.map((word) => {
-				return word[0].toUpperCase() + word.slice(1);
-			})
-			.join('');
-	if (wordArr.length < 1 || wordArr.length > 140) {
-		console.log(false);
+	let words = str.split(' ');
+	let hashtag = '#';
+	words.forEach((word) => {
+		let firstChar = word.slice(0, 1).toUpperCase();
+		let fixedWord = firstChar + word.slice(1);
+		hashtag = hashtag + fixedWord;
+	});
+	if (hashtag.length > 140 || str === '') {
 		return false;
-	} else {
-		console.log(wordArr);
-		return wordArr;
 	}
+	return hashtag;
 }
 
 generateHashtag(
