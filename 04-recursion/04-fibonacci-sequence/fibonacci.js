@@ -1,13 +1,11 @@
 function fibonacci(num) {
-	if (num <= 0) {
-		return num;
-	} else if (num === 1) {
+	if (num < 2) {
 		return num;
 	}
 	return fibonacci(num - 1) + fibonacci(num - 2);
 }
 
-console.log(fibonacci(7));
+console.log(fibonacci(6));
 
 module.exports = fibonacci;
 

@@ -12,4 +12,5 @@ module.exports = findMissingLetter;
 
 //function takes in an array
 //  store the unicode value of first array position
-//
+//  iterate through array to check if each char unicode matches the next unicode
+//  return the first unicode value with no match in array

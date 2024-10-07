@@ -1,7 +1,7 @@
 class Node {
 	constructor(data) {
 		this.data = data;
-		this.next = null;
+		this.next = next;
 	}
 }
 
@@ -22,6 +22,9 @@ class LinkedList {
 	}
 
 	printAll() {
+		if (this.head === null) {
+			return false;
+		}
 		let current = this.head;
 
 		while (current !== null) {
@@ -33,48 +36,47 @@ class LinkedList {
 	get(index) {
 		let current = this.head;
 		let i = 0;
+
 		while (i < index) {
 			current = current.next;
 			i++;
 		}
+		return current.data;
 	}
 
 	insertAt(index, data) {
+		const node = new Node(data);
 		if (index === 0) {
-			const node = new Node(data);
 			node.next = this.head;
 			this.head = node;
-		} else {
-			let current = this.head;
-			let previous = null;
-			let i = 0;
-
-			while (i < index) {
-				previous = current;
-				current = current.next;
-				i++;
-			}
-			const node = new Node(data);
-			node.next = current;
-			previous.next = node;
 		}
+		let current = this.head;
+		let previous = null;
+		let i = 0;
+
+		while (i < index) {
+			previous = current;
+			current = current.next;
+			i++;
+		}
+		previous.next = node;
+		node.next = current;
 	}
 
 	removeFrom(index) {
 		if (index === 0) {
 			this.head = this.head.next;
-		} else {
-			let current = this.head;
-			let previous = null;
-			let i = 0;
-
-			while (i < index) {
-				previous = current;
-				current = current.next;
-				i++;
-			}
-			previous.next = current.next;
 		}
+		let current = this.head;
+		let previous = null;
+		let i = 0;
+
+		while (i < index) {
+			previous = current;
+			current = current.next;
+			i++;
+		}
+		previous.next = current.next;
 	}
 }
 

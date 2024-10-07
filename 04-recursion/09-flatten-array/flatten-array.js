@@ -9,7 +9,7 @@ function flattenArray(arr) {
 	}
 	return result;
 }
-
+console.log(flattenArray([1, 5, 3, 6, 2, [1, 3, 2], 3, 5]));
 module.exports = flattenArray;
 
 // function takes in array of arrays to be combines into one array

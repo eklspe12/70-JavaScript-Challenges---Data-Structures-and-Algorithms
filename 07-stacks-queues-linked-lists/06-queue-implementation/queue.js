@@ -1,9 +1,9 @@
 class Queue {
 	constructor() {
 		this.queue = [];
+		this.maxSize = 100;
 		this.head = 0;
 		this.tail = 0;
-		this.maxSize = 100;
 	}
 
 	getLength() {
