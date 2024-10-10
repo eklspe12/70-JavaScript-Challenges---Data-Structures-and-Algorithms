@@ -14,6 +14,9 @@ function anagramGrouping(words) {
 }
 
 module.exports = anagramGrouping;
+console.log(
+	anagramGrouping(['listen', 'silent', 'hello', 'world', 'act', 'cat'])
+);
 
 // function takes in string
 //      create an array to hold each word as a string without caps or punctuation
